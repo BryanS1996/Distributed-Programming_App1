@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './App.css'; // Import styles
+import './App.css';
 
 function App() {
   const [pokemonName, setPokemonName] = useState('');
@@ -78,7 +78,7 @@ function App() {
           <div className="search-section">
             <input
               type="text"
-              placeholder="E.g. pikachu, charizard or 25"
+              placeholder="Ejemplo: pikachu, charizard o 25"
               value={pokemonName}
               onChange={(e) => setPokemonName(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && buscarYAtraparPokemon()}
