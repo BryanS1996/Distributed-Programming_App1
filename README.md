@@ -1,2 +1,3 @@
 # Distributed-Programming
-Progrmación Distrubuida
+Programación Distrubuida
+8vo Semestre
