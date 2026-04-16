@@ -69,8 +69,8 @@ function App() {
   return (
     <div className="app-container">
       <header className="header">
-        <h1>Pokédex Full-Stack</h1>
-        <p>Search and save Pokémon to your database</p>
+        <h1>Pokédex UCE</h1>
+        <p>Busca y Guarda tu pokemon en la Pokedéx</p>
       </header>
 
       {!showList ? (
@@ -110,7 +110,7 @@ function App() {
                 <div className="pokemon-info-section">
                   <div className="info-grid">
                     <div className="info-card">
-                      <span className="label">Type</span>
+                      <span className="label">Tipo</span>
                       <span className="value">{pokemonData.type}</span>
                     </div>
                     <div className="info-card">
