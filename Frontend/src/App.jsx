@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './App.css'; // Import styles
+import './App.css';
 
 function App() {
   const [pokemonName, setPokemonName] = useState('');
@@ -18,7 +18,7 @@ function App() {
     setPokemonData(null);
 
     try {
-      const response = await fetch(`http://localhost:3000/api/pokemons/catch/${pokemonName}`, {
+      const response = await fetch(`/api/pokemons/catch/${pokemonName}`, {
         method: 'POST'
       });
       
@@ -41,7 +41,7 @@ function App() {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch('http://localhost:3000/api/pokemons');
+      const response = await fetch('/api/pokemons');
       const data = await response.json();
       
       if (!response.ok) {
@@ -69,8 +69,8 @@ function App() {
   return (
     <div className="app-container">
       <header className="header">
-        <h1>Pokédex Full-Stack</h1>
-        <p>Search and save Pokémon to your database</p>
+        <h1>Pokédex UCE</h1>
+        <p>Busca y Guarda tu pokemon en la Pokedéx</p>
       </header>
 
       {!showList ? (
@@ -78,7 +78,7 @@ function App() {
           <div className="search-section">
             <input
               type="text"
-              placeholder="E.g. pikachu, charizard or 25"
+              placeholder="Ejemplo: pikachu, charizard o 25"
               value={pokemonName}
               onChange={(e) => setPokemonName(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && buscarYAtraparPokemon()}
@@ -110,7 +110,7 @@ function App() {
                 <div className="pokemon-info-section">
                   <div className="info-grid">
                     <div className="info-card">
-                      <span className="label">Type</span>
+                      <span className="label">Tipo</span>
                       <span className="value">{pokemonData.type}</span>
                     </div>
                     <div className="info-card">
