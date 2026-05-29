@@ -18,7 +18,7 @@ function App() {
     setPokemonData(null);
 
     try {
-      const response = await fetch(`http://localhost:3000/api/pokemons/catch/${pokemonName}`, {
+      const response = await fetch(`/api/pokemons/catch/${pokemonName}`, {
         method: 'POST'
       });
       
@@ -41,7 +41,7 @@ function App() {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch('http://localhost:3000/api/pokemons');
+      const response = await fetch('/api/pokemons');
       const data = await response.json();
       
       if (!response.ok) {
